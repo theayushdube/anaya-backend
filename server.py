@@ -284,3 +284,7 @@ def train(epochs: int = 50, batch_size: int = 32):
         anaya.optimizer.step()
 
     return {"message": "training complete"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("server:app", host="0.0.0.0", port=8080)
